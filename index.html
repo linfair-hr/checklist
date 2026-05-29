@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>績效考核_各項獎金獎勵補助申請檢核表</title>
+  <meta name="description" content="考核當年度適用之各項獎金獎勵補助申請檢核工具">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="header-title">
+        <h1>績效考核_各項獎金獎勵補助申請檢核表</h1>
+        <span class="subtitle">考核當年度適用</span>
+      </div>
+      <div class="header-actions">
+        <label class="student-input">
+          <span>姓名</span>
+          <input type="text" id="employeeName" placeholder="請輸入姓名">
+        </label>
+        
+        <label class="module-select">
+          <span>部門</span>
+          <select id="department">
+            <option value="">— 請選取部門 —</option>
+            <option value="總經理室">總經理室</option>
+            <option value="採購部">採購部</option>
+            <option value="數位媒體">數位媒體</option>
+            <option value="管理部">管理部</option>
+            <option value="財務部">財務部</option>
+            <option value="電子商務事業部">電子商務事業部</option>
+            <option value="業務部">業務部</option>
+            <option value="工程部">工程部</option>
+          </select>
+        </label>
+
+        <label class="module-select">
+          <span>個人考核成績</span>
+          <select id="performanceScore">
+            <option value="">— 請選取分數區間 —</option>
+            <option value="95">95分 (含) 以上</option>
+            <option value="90">90 ~ 94分</option>
+            <option value="85">85 ~ 89分</option>
+            <option value="80">80 ~ 84分</option>
+            <option value="70">70 ~ 79分</option>
+            <option value="0">69分 (含) 以下</option>
+          </select>
+        </label>
+        <button id="printBtn" class="btn btn-secondary" type="button">列印表單</button>
+        <button id="resetBtn" class="btn btn-ghost" type="button">重設清除</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="course-panel" aria-label="獎金補助申請項目">
+      <div id="projectList"></div>
+    </section>
+
+    <aside class="dashboard-panel" aria-label="申請進度儀表板">
+      <div class="dashboard-sticky">
+        <h2 class="dashboard-title">申請進度摘要</h2>
+        <div class="total-credits">
+          <span class="total-label">預估申請總金額</span>
+          <span class="total-number">NT$ <strong id="totalAmount">0</strong></span>
+        </div>
+        
+        <h3 class="checklist-title">各類別申請小計</h3>
+        <ul class="progress-list" id="categorySummary"></ul>
+
+        <h3 class="checklist-title">已申請假別統計</h3>
+        <ul class="checklist" id="leaveSummary" style="color: #2b6cb0; font-weight: bold; margin-bottom: 20px;"></ul>
+
+        <!-- 相關檔案下載區塊（已完美對接微軟 SharePoint 官方企業共用網址） -->
+        <h3 class="checklist-title">相關檔案下載</h3>
+        <ul class="checklist" style="text-align: left; padding-left: 0; line-height: 1.8;">
+          <li style="margin-bottom: 8px;">
+            📄 <a href="https://linfairtw-my.sharepoint.com/:f:/g/personal/hr_linfair_com_tw/IgCYLykry3kLSqVCgMlF5QNRAYJ24esCLpWr0O36EdeAVT4?e=0o71yE" target="_blank" style="color: #2b6cb0; text-decoration: underline; font-weight: bold;">績效考核-各項獎勵實施細則_20260528版</a>
+          </li>
+          <li>
+            📄 <a href="https://linfairtw-my.sharepoint.com/:f:/g/personal/hr_linfair_com_tw/IgCYLykry3kLSqVCgMlF5QNRAYJ24esCLpWr0O36EdeAVT4?e=0o71yE" target="_blank" style="color: #2b6cb0; text-decoration: underline; font-weight: bold;">績效考核_各項獎金獎勵補助申請表_V1.2 260525</a>
+          </li>
+        </ul>
+
+        <h3 class="checklist-title">基本申請資格確認</h3>
+        <ul class="checklist" id="qualificationChecklist"></ul>
+        <div class="save-status" id="saveStatus">提示：資料已自動儲存於此瀏覽器</div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      內部參考工具｜資料僅儲存於你的瀏覽器，不會上傳任何伺服器｜
+      依據《績效考核-各項獎勵實施細則》｜ 管理部人事
+    </p>
+  </footer>
+
+  <script src="courses-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
