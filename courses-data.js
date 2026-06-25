@@ -1,4 +1,4 @@
-Sconst CHECKLIST_DATA = {
+const CHECKLIST_DATA = {
   categories: {
     welfare: {
       title: "員工福利",
