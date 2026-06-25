@@ -25,7 +25,7 @@ const CHECKLIST_DATA = {
       items: [
         { id: "exc_sport", name: "運動獎金申請 (每月最高 1,500 元)", bonus: 1500, minScore: 85, note: "檢附訓練證明、收據、當年度績效考核成績達 85 分之證明" },
         { id: "exc_off", name: "每月一週 周休三日", bonus: 0, minScore: 85, isLeave: true, note: "檢附當年度績效考核成績達 85 分之證明" },
-        { id: "exc_festival", name: "績優員工節金 (中秋、端午發放金額各 4,500 元)", bonus: 7000, minScore: 90, note: "檢附當年度績效考核成績達 90 分之證明" }
+        { id: "exc_festival", name: "績優員工節金 (中秋、端午發放金額各 4,500 元)", bonus: 9000, minScore: 90, note: "檢附當年度績效考核成績達 90 分之證明" }
       ]
     }
   },
